@@ -7,6 +7,15 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
+/**
+ * 
+ * 
+ * Firebase:
+ * cd ......./functions
+ * firebase login
+ * firebase init (Oerwrite  not initialize option for the first option if already exists and for every file don't overwrite to keep the local version)
+ * firebase deploy --only functions
+ */
 const {onRequest} = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
