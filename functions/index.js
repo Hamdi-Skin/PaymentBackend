@@ -16,6 +16,24 @@
  * firebase init (Oerwrite  not initialize option for the first option if already exists and for every file don't overwrite to keep the local version)
  * firebase deploy --only functions
  */
+
+
+/*
+
+
+Cybersource test:  https://ebctest.cybersource.com/ebc2/app/Home
+
+
+Creating a profile in CyberSource:
+1. Payment Configuration
+2. Secure Acceptance Settings
+3. The profile should be activated before triggering the POST requests
+
+Checking Transactions History of the profile:
+Cybersource-> Transactions Management -> Secure Acceptance
+*/
+
+
 const {onRequest} = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
@@ -29,15 +47,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
-/*
-Creating a profile in CyberSource:
-1. Payment Configuration
-2. Secure Acceptance Settings
-3. The profile should be activated before triggering the POST requests
 
-Checking Transactions History of the profile:
-Cybersource-> Transactions Management -> Secure Acceptance
-*/
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
